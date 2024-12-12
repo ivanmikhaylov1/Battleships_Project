@@ -1,4 +1,3 @@
-import logging
 import asyncpg
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -6,7 +5,7 @@ import asyncio
 import random
 from aiogram.dispatcher.router import Router
 
-API_TOKEN = ''
+API_TOKEN = '7600619339:AAHpolJFlzen68FaS6_5OipUmzZH8RRkyRM'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
@@ -24,7 +23,6 @@ async def create_db_connection():
         conn = await asyncpg.connect(**DB_CONFIG)
         return conn
     except Exception as e:
-        logging.error(f"Ошибка подключения к базе данных: {e}")
         return None
 
 async def get_user_statistics(user_id):
@@ -202,7 +200,6 @@ def generate_keyboard(board):
     buttons.append(row_buttons)
 
   keyboard = InlineKeyboardMarkup(inline_keyboard=buttons)
-  logging.debug(f'Generated keyboard: {keyboard}')
   return keyboard
 
 
