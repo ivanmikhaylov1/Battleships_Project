@@ -5,7 +5,7 @@ import asyncio
 import random
 from aiogram.dispatcher.router import Router
 
-API_TOKEN = '7600619339:AAHpolJFlzen68FaS6_5OipUmzZH8RRkyRM'
+API_TOKEN = ''
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
